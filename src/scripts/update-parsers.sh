@@ -167,7 +167,7 @@ CURRENT_VERSION=$(get_current_version "plugins")
 echo "Current version: $CURRENT_VERSION"
 
 # Get latest plugins' version
-LATEST_VERSION=$(get_latest_version_github "coslyk/moonplayer-plugins")
+LATEST_VERSION=$(get_latest_version_github "fangjiyuan/moonplayer-plugins")
 if [ -n "$LATEST_VERSION" ]; then
     echo "Latest version: $LATEST_VERSION"
 else
@@ -181,7 +181,7 @@ else
     # Download latest version
     echo "\n-------------- Updating plugins --------------"
     echo "Downloading latest version..."
-    URL="$GITHUB_MIRROR/coslyk/moonplayer-plugins/releases/download/$LATEST_VERSION/plugins.zip"
+    URL="$GITHUB_MIRROR/fangjiyuan/moonplayer-plugins/releases/download/$LATEST_VERSION/plugins.zip"
     echo "$URL"
     downloader plugins.zip "$URL"
     unzip -o plugins.zip -d plugins
